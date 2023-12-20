@@ -1,0 +1,234 @@
+@charset "utf-8";
+*{margin: 0; padding: 0;}
+ol,ul{list-style: none;}
+a{color: inherit; text-decoration: none;}
+html,body{color: #333; font-family: 'Noto Sans';}
+
+
+.wrap{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header{
+    width: 400px;
+    height: 100%;
+    position: fixed; top: 0; left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 20vh 2vw 7vh 2vw;
+    color: #fff;
+    background: url('../img/header7.jpg') center center no-repeat;
+    background-size: cover;
+    /*background: linear-gradient(-135deg, rgb(59, 59, 59), rgb(255, 255, 255));*/
+
+}
+
+.title{
+    font-family: 'Rubik Doodle Shadow', sans-serif;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+
+}
+
+.title>p:nth-child(1){
+    font-size: 1.5vw;
+    width: 90%;
+    font-weight: 600; 
+}
+
+.title>p:nth-child(2){
+    font-size: 3vw;
+    width: 90%;
+    font-weight: 700; 
+}
+
+.title>p:nth-child(2)::after{
+    content: "";
+    display: block;
+    width: 55%;
+    border-top: 2.5px solid #fff;
+    margin: 15px 0;
+}
+
+.title>p:nth-child(3){
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 10px;
+    font-weight: 600; 
+    font-family: 'Noto Sans';
+
+}
+
+.sns{
+    display: flex;
+}
+
+.sns>li{
+    margin-left: 22px;
+}
+
+.sns>li i{
+    padding-right: 5px;
+}
+
+.right{
+    width: calc(100% - 400px);
+    box-sizing: border-box;
+    padding: 30px;
+    background-color: #e4e4e4;
+}
+
+.btns{
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'Orbitron', sans-serif;
+    margin: 20px 0;
+}
+
+.btns>li{
+    width: 100px;
+    line-height: 30px;
+    background-color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #7f7f7f;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-left: 25px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.btns>li.active{
+    background: linear-gradient(-135deg, rgb(180, 218, 255), rgb(255, 183, 230));
+    box-shadow: 0 0 20px rgba(64, 224, 208, 0.5); /*터키석색상을 rgba로 적용함*/
+    color: #fff;
+
+}
+
+.content{
+    padding: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.conbox{
+    width: 20%;
+    padding: 5px;
+    box-sizing: border-box ;
+    margin-bottom: 10px;
+}
+
+.inner{
+    background-color: #fff;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.inner img{
+    width: 100%;
+}
+
+.inner p:nth-of-type(1){
+    line-height: 200%;
+    font-weight: bold;
+
+}
+
+.inner p:nth-of-type(2){
+    font-size: 13px;
+    color: #999;
+    
+}
+
+
+
+
+
+
+
+
+
+/*미디어쿼리*/
+@media all and (max-width:540px){
+    .conbox{width: 100% ;}
+   
+
+} 
+
+@media all and (min-width:541px) and (max-width:680px){
+    .conbox{width: 50% ;}
+    
+
+} 
+
+@media all and (min-width:681px) and (max-width:900px){
+    .conbox{width: 33% ;}
+   
+
+} 
+
+@media all and (min-width:901px) and (max-width:1200px){
+    .conbox{width: 25% ;}
+    
+
+} 
+
+
+
+/*mobile*/
+@media all and (max-width:1200px){
+.wrap{flex-direction: column;}
+
+.header{position:static;
+        width: 100%; height: 80px;
+        padding: 0 2vw;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        background: url('../img/header7.jpg') center center no-repeat;
+        background-size: cover;
+    }
+
+.title{margin-top: 20px;}    
+
+.title p:nth-child(1)
+       {display: none;}
+
+.title p:nth-child(2)::after{display: none;}
+
+.title p:nth-child(2){width: auto;  font-size: 30px;}
+
+.title p:nth-child(3){display: none;}
+
+.sns span{display: none; } 
+.sns{font-size: 20px; margin-top: 20px;}  
+.right{width: 100%;}   
+.btns{margin-right: 30px;}
+
+}
+
+
+
+@media all and (min-width:1201px) and (max-width:1599px){
+    .header{
+        width: 350px;
+        background: url('../img/header8.jpg') center center no-repeat;
+        object-fit: cover;}
+    .right{width: calc(100% - 350px);}
+    .sns{font-size: 14px;}
+    .conbox{width: 25%;}
+}
+
+
+
+@media all and (min-width:1600px){
+  
+
+}
